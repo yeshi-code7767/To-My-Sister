@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday, My Sister 💖</title>
+
+<style>
+/* =========================
+   BASIC SETUP
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #fff0f7, #f1e9ff, #fff4e6);
+    color: #593b59;
+    overflow-x: hidden;
+}
+
+/* =========================
+   BACKGROUND PARTICLES
+========================= */
+#particles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 12px white;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: .2;
+        transform: scale(.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+.music-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+
+    border: none;
+    padding: 12px 18px;
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.8);
+    color: #a44d82;
+    font-weight: bold;
+    cursor: pointer;
+
+    box-shadow: 0 5px 20px rgba(130,70,120,.2);
+    backdrop-filter: blur(10px);
+
+    transition: .3s;
+}
+
+.music-btn:hover {
+    transform: scale(1.08);
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    min-height: 100vh;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 80px 20px;
+
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    max-width: 850px;
+}
+
+.small-title {
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    color: #b66b9b;
+    margin-bottom: 15px;
+    animation: fadeDown 1.2s ease;
+}
+
+h1 {
+    font-size: clamp(2.7rem, 8vw, 6rem);
+    line-height: 1.05;
+
+    background: linear-gradient(
+        90deg,
+        #c65d91,
+        #a77bd4,
+        #d989a8
+    );
+
+    -webkit-background-clip: text;
+    color: transparent;
+
+    animation: titleGlow 3s infinite alternate;
+}
+
+@keyframes titleGlow {
+    from {
+        filter: drop-shadow(0 0 3px rgba(220,120,170,.2));
+    }
+
+    to {
+        filter: drop-shadow(0 0 20px rgba(220,120,170,.5));
+    }
+}
+
+.hero-subtitle {
+    margin: 25px auto;
+    max-width: 650px;
+
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #76576f;
+}
+
+.start-btn,
+.special-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 28px;
+
+    border: none;
+    border-radius: 40px;
+
+    background: linear-gradient(135deg, #e895bb, #aa88dc);
+    color: white;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    box-shadow: 0 10px 30px rgba(170,110,170,.3);
+
+    transition: .3s;
+}
+
+.start-btn:hover,
+.special-btn:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(170,110,170,.4);
+}
+
+/* =========================
+   BALLOONS
+========================= */
+.balloon {
+    position: absolute;
+    bottom: -150px;
+
+    width: 55px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    opacity: .8;
+
+    animation: balloonUp linear infinite;
+}
+
+.balloon::after {
+    content: "";
+    position: absolute;
+
+    width: 1px;
+    height: 100px;
+
+    background: rgba(80,80,80,.3);
+
+    left: 50%;
+    top: 68px;
+}
+
+.balloon::before {
+    content: "";
+    position: absolute;
+
+    bottom: -5px;
+    left: 22px;
+
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid currentColor;
+}
+
+@keyframes balloonUp {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+
+    100% {
+        transform: translateY(-120vh) rotate(15deg);
+    }
+}
+
+/* =========================
+   HEARTS
+========================= */
+.heart {
+    position: fixed;
+    bottom: -40px;
+
+    font-size: 22px;
+
+    pointer-events: none;
+    z-index: 20;
+
+    animation: heartUp 6s linear forwards;
+}
+
+@keyframes heartUp {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(.5);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-110vh) scale(1.5) rotate(20deg);
+    }
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+    min-height: 100vh;
+    padding: 100px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.section-container {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #a75c91;
+    margin-bottom: 35px;
+}
+
+/* =========================
+   MESSAGE CARD
+========================= */
+.message-card {
+    padding: 45px;
+
+    border-radius: 35px;
+
+    background: rgba(255,255,255,.55);
+    border: 1px solid rgba(255,255,255,.8);
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 20px 60px rgba(130,80,130,.15);
+
+    line-height: 1.9;
+    font-size: 1.08rem;
+
+    animation: cardFloat 4s ease-in-out infinite;
+}
+
+@keyframes cardFloat {
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* =========================
+   CAKE
+========================= */
+.cake-area {
+    margin: 50px auto;
+    width: 220px;
+    height: 210px;
+
+    position: relative;
+}
+
+.cake {
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+
+    width: 170px;
+    height: 90px;
+
+    background: linear-gradient(#ffb6ce, #e984ae);
+
+    border-radius: 20px 20px 15px 15px;
+
+    box-shadow:
+        0 15px 25px rgba(180,80,130,.25);
+}
+
+.cake::before {
+    content: "♡  ♡  ♡";
+    position: absolute;
+
+    top: 20px;
+    width: 100%;
+
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+.cream {
+    position: absolute;
+    top: -18px;
+    left: 0;
+
+    width: 100%;
+    height: 35px;
+
+    background: #fff7fb;
+    border-radius: 50%;
+}
+
+.candle {
+    position: absolute;
+
+    width: 13px;
+    height: 55px;
+
+    background: #fff;
+    border-radius: 5px;
+
+    top: -70px;
+}
+
+.candle:nth-child(1) {
+    left: 35px;
+}
+
+.candle:nth-child(2) {
+    left: 78px;
+}
+
+.candle:nth-child(3) {
+    left: 120px;
+}
+
+.flame {
+    position: absolute;
+
+    width: 16px;
+    height: 22px;
+
+    background: #ffd15c;
+
+    border-radius: 50% 50% 50% 0;
+
+    transform: rotate(-45deg);
+
+    top: -25px;
+    left: -2px;
+
+    box-shadow: 0 0 20px #ffc857;
+
+    animation: flame 1s infinite alternate;
+}
+
+@keyframes flame {
+    from {
+        transform: rotate(-45deg) scale(.9);
+    }
+
+    to {
+        transform: rotate(-45deg) scale(1.15);
+    }
+}
+
+/* =========================
+   GIFT
+========================= */
+.gift-wrapper {
+    margin: 40px auto;
+    cursor: pointer;
+
+    width: 160px;
+    height: 150px;
+
+    position: relative;
+
+    transition: .4s;
+}
+
+.gift-wrapper:hover {
+    transform: scale(1.08);
+}
+
+.gift {
+    position: absolute;
+    bottom: 0;
+
+    width: 150px;
+    height: 105px;
+
+    background: linear-gradient(135deg, #e995bc, #b78bdd);
+
+    border-radius: 8px;
+}
+
+.gift::after {
+    content: "";
+
+    position: absolute;
+    left: 62px;
+    top: 0;
+
+    width: 25px;
+    height: 105px;
+
+    background: #fff1d6;
+}
+
+.gift-lid {
+    position: absolute;
+
+    width: 165px;
+    height: 35px;
+
+    left: -7px;
+    top: -28px;
+
+    background: #d982af;
+
+    border-radius: 8px;
+
+    transition: .6s;
+}
+
+.gift-lid::after {
+    content: "";
+
+    position: absolute;
+
+    left: 70px;
+    top: 0;
+
+    width: 25px;
+    height: 35px;
+
+    background: #fff1d6;
+}
+
+.gift-wrapper.open .gift-lid {
+    transform: translateY(-65px) rotate(-10deg);
+}
+
+.gift-ribbon {
+    position: absolute;
+
+    width: 60px;
+    height: 25px;
+
+    background: #fff1d6;
+
+    top: -52px;
+    left: 45px;
+
+    border-radius: 50%;
+}
+
+/* =========================
+   SPECIAL MESSAGE
+========================= */
+.special-message {
+    max-width: 750px;
+    margin: 30px auto;
+
+    padding: 35px;
+
+    background: rgba(255,255,255,.65);
+
+    border-radius: 30px;
+
+    line-height: 1.9;
+
+    opacity: 0;
+    transform: translateY(30px);
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition:
+        opacity .8s,
+        transform .8s,
+        max-height 1s;
+}
+
+.special-message.show {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 500px;
+}
+
+/* =========================
+   PETALS
+========================= */
+.petal {
+    position: fixed;
+    top: -30px;
+
+    font-size: 20px;
+
+    pointer-events: none;
+    z-index: 10;
+
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+
+    background: rgba(255,255,255,.35);
+
+    color: #8d6682;
+}
+
+footer strong {
+    color: #b5578b;
+}
+
+/* =========================
+   CONFETTI
+========================= */
+.confetti {
+    position: fixed;
+
+    width: 9px;
+    height: 14px;
+
+    top: -20px;
+
+    z-index: 999;
+
+    pointer-events: none;
+
+    animation: confettiFall linear forwards;
+}
+
+@keyframes confettiFall {
+    to {
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 600px) {
+
+    .music-btn {
+        top: 12px;
+        right: 12px;
+
+        padding: 9px 13px;
+        font-size: .8rem;
+    }
+
+    .hero {
+        padding: 70px 18px;
+    }
+
+    .small-title {
+        font-size: .8rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .message-card {
+        padding: 25px 20px;
+        font-size: .98rem;
+    }
+
+    section {
+        padding: 80px 15px;
+    }
+
+    .section-title {
+        margin-bottom: 25px;
+    }
+
+    .cake-area {
+        transform: scale(.85);
+    }
+
+    .special-message {
+        padding: 25px 20px;
+        font-size: .95rem;
+    }
+
+    .balloon {
+        width: 40px;
+        height: 55px;
+    }
+
+    .start-btn,
+    .special-btn {
+        padding: 13px 22px;
+        font-size: .9rem;
+    }
+}
+/* =========================
+   SPECIAL BUDDY LETTER
+========================= */
+
+.final-section {
+    min-height: 100vh;
+    position: relative;
+}
+
+.final-intro {
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.8;
+    color: #76576f;
+    font-size: 1.05rem;
+}
+
+/* Special Buddy Button */
+
+.buddy-btn {
+    margin-top: 25px;
+    padding: 16px 30px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #d982af,
+        #a77bd4
+    );
+
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(170, 110, 170, .35);
+
+    transition: all .35s ease;
+}
+
+.buddy-btn:hover {
+    transform: translateY(-5px) scale(1.04);
+
+    box-shadow:
+        0 15px 40px rgba(170, 110, 170, .45);
+}
+
+.buddy-btn:active {
+    transform: scale(.96);
+}
+
+/* Letter */
+
+.buddy-letter {
+    max-width: 780px;
+    margin: 35px auto 0;
+
+    padding: 45px 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.82),
+            rgba(255,240,248,.75)
+        );
+
+    border: 1px solid rgba(255,255,255,.9);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 70px rgba(130,80,130,.2);
+
+    text-align: left;
+
+    line-height: 1.9;
+
+    opacity: 0;
+    transform: translateY(35px) scale(.96);
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease,
+        max-height 1.2s ease,
+        padding .8s ease;
+}
+
+.buddy-letter.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+
+    max-height: 1000px;
+
+    padding: 45px 50px;
+}
+
+.letter-decoration {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.buddy-letter h2 {
+    color: #a65385;
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.buddy-letter p {
+    margin-bottom: 22px;
+    color: #624b5d;
+}
+
+.letter-ending {
+    margin-top: 30px;
+    text-align: right;
+    font-family: Georgia, serif;
+}
+
+.letter-ending p {
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.letter-ending h3 {
+    color: #b5578b;
+    font-size: 1.5rem;
+}
+
+.letter-hearts {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 1.3rem;
+    letter-spacing: 8px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .final-intro {
+        font-size: .95rem;
+        padding: 0 10px;
+    }
+
+    .buddy-btn {
+        padding: 14px 22px;
+        font-size: .9rem;
+    }
+
+    .buddy-letter {
+        padding: 25px 20px;
+        border-radius: 24px;
+        font-size: .95rem;
+    }
+
+    .buddy-letter.show {
+        padding: 25px 20px;
+    }
+
+    .buddy-letter h2 {
+        font-size: 1.6rem;
+    }
+
+    .letter-ending {
+        text-align: center;
+    }
+
+    .letter-hearts {
+        letter-spacing: 4px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<button class="music-btn" id="musicBtn">
+    🎵 Play Music
+</button>
+
+<audio id="birthdayMusic" loop>
+    <!-- Replace with your own music file -->
+    <source src="birthday-music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PARTICLES -->
+<div id="particles"></div>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            A LITTLE SURPRISE JUST FOR YOU ✨
+        </div>
+
+        <h1>
+            Happy Birthday,<br>
+            My Dear Sister! 🎂💖
+        </h1>
+
+        <p class="hero-subtitle">
+            Today is a special day because it celebrates
+            someone incredibly special to our family. 🌸
+            <br>
+            This little surprise is made with lots of love,
+            just for you. 💕
+        </p>
+
+        <a href="#message" class="start-btn">
+            Open Your Birthday Surprise 🎁
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- MESSAGE -->
+<section id="message">
+
+    <div class="section-container">
+
+        <h2 class="section-title">
+            A Birthday Message For You 💌
+        </h2>
+
+        <div class="message-card">
+
+            <p>
+                Happy Birthday to the most wonderful sister! 🌸
+            </p>
+
+            <br>
+
+            <p>
+                You are not just my sister, but also someone
+                who brings happiness, laughter, and warmth
+                into my life.
+            </p>
+
+            <br>
+
+            <p>
+                Thank you for always being there, for all the
+                beautiful memories we share, and for making
+                our family brighter.
+            </p>
+
+            <br>
+
+            <p>
+                I hope your special day is filled with love,
+                happiness, laughter, and everything your heart
+                wishes for.
+            </p>
+
+            <br>
+
+            <p>
+                May this new year of your life bring you
+                countless beautiful moments and unforgettable
+                memories.
+            </p>
+
+            <br>
+
+            <p>
+                Keep smiling, keep shining, and always be the
+                amazing person you are. 💕✨
+            </p>
+
+        </div>
+
+        <!-- CAKE -->
+        <div class="cake-area">
+
+            <div class="cake">
+
+                <div class="cream"></div>
+
+                <div class="candle" style="left:35px;">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle" style="left:78px;">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle" style="left:120px;">
+                    <div class="flame"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GIFT -->
+<section>
+
+    <div class="section-container">
+
+        <h2 class="section-title">
+            There's Something For You 🎁
+        </h2>
+
+        <p class="hero-subtitle">
+            A little gift for a very special sister.
+            <br>
+            Click the gift to open it! 💖
+        </p>
+
+        <div class="gift-wrapper" id="gift">
+
+            <div class="gift">
+
+                <div class="gift-lid"></div>
+
+                <div class="gift-ribbon"></div>
+
+            </div>
+
+        </div>
+
+        <p id="giftText">
+            🎁 Click me!
+        </p>
+
+        <div class="special-message" id="giftMessage">
+
+            <h3>💖 Surprise!</h3>
+
+            <br>
+
+            <p>
+                You are one of the most precious gifts our
+                family could ever have.
+            </p>
+
+            <br>
+
+            <p>
+                Thank you for bringing so much happiness,
+                laughter, and love into our lives.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SPECIAL MESSAGE -->
+<section>
+
+    <div class="section-container">
+
+        <h2 class="section-title">
+            One More Thing... 💕
+        </h2>
+
+        <button class="special-btn" id="specialBtn">
+            A Special Message For You 💌
+        </button>
+
+        <div class="special-message" id="specialMessage">
+
+            <p>
+                Sometimes words are not enough to explain
+                how special you are to me.
+            </p>
+
+            <br>
+
+            <p>
+                No matter how much we grow up, you will always
+                be my precious sister.
+            </p>
+
+            <br>
+
+            <p>
+                I’m truly grateful for every memory, every
+                laugh, and every moment we have shared.
+            </p>
+
+            <br>
+
+            <p>
+                Always remember that you are loved,
+                appreciated, and incredibly special.
+            </p>
+
+            <br>
+
+            <p>
+                Keep chasing your dreams, keep believing in
+                yourself, and never stop smiling. 🌷💖
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+<section>
+
+    <div class="section-container">
+
+        <h1>
+            Happy Birthday,<br>
+            My Beautiful Sister! 🎂💐💖
+        </h1>
+
+        <br>
+
+        <div class="message-card">
+
+            <p>
+                No matter how much we grow up, you will always
+                be my precious sister.
+            </p>
+
+            <br>
+
+            <p>
+                I’m truly grateful to have you in my life.
+            </p>
+
+            <br>
+
+            <p>
+                May you always be surrounded by happiness,
+                love, beautiful people, and wonderful moments.
+            </p>
+
+            <br>
+
+            <p>
+                May all your dreams come true and may this
+                new year become one of the most beautiful
+                chapters of your life.
+            </p>
+
+            <br>
+
+            <strong>
+                Once again, Happy Birthday! 🎂💐💖
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- FINAL SPECIAL BUDDY MESSAGE -->
+<section class="final-section">
+
+    <div class="section-container">
+
+        <h1>
+            Happy Birthday,<br>
+            My Buddy! 🎂💐💖
+        </h1>
+
+        <p class="final-intro">
+            Before you leave, there is one last message
+            specially written for you. 💕
+        </p>
+
+        <!-- ONE BUTTON -->
+        <button class="buddy-btn" id="buddyBtn">
+            💌 From Your Special Buddy 🫂❤️
+        </button>
+
+        <!-- HIDDEN LETTER -->
+        <div class="buddy-letter" id="buddyLetter">
+
+            <div class="letter-decoration">
+                🌷 ✨ 🫂 ✨ 🌷
+            </div>
+
+            <h2>Dear Sonam, 💖</h2>
+
+            <p>
+                Wish you many more happy returns of the day!
+                May this day bring you a great, happy, healthy,
+                and prosperous year ahead in your youth.
+                May God bless you, fulfill all your wishes,
+                and grant you great success in life.
+            </p>
+
+            <p>
+                God’s grace brought us together 5 years ago,
+                and from that day to today, we have built a
+                special bond meant for an eternity.
+                Some bonds are simply beyond words to express.
+            </p>
+
+            <p>
+                Love you and thank you for always being there
+                for me.
+            </p>
+
+            <div class="letter-ending">
+
+                <p>
+                    Yours forever ♾️ buddy,
+                </p>
+
+                <h3>
+                    Bhumi 🫂❤️‍🩹🌷
+                </h3>
+
+            </div>
+
+            <div class="letter-hearts">
+                💕 💖 💗 💕
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    Made with 💖 specially for my amazing sister
+    <br><br>
+    <strong>Happy Birthday! 🎂✨</strong>
+</footer>
+
+
+<script>
+
+/* =========================
+   PARTICLES
+========================= */
+
+const particles = document.getElementById("particles");
+
+for (let i = 0; i < 80; i++) {
+
+    const p = document.createElement("div");
+
+    p.className = "particle";
+
+    p.style.left = Math.random() * 100 + "%";
+    p.style.top = Math.random() * 100 + "%";
+
+    p.style.animationDelay =
+        Math.random() * 2 + "s";
+
+    particles.appendChild(p);
+}
+
+
+/* =========================
+   BALLOONS
+========================= */
+
+const balloonColors = [
+    "#f4a6c5",
+    "#c7a4e8",
+    "#ffd0a8",
+    "#a8d8ea",
+    "#e7b6d9"
+];
+
+for (let i = 0; i < 15; i++) {
+
+    const balloon = document.createElement("div");
+
+    balloon.className = "balloon";
+
+    balloon.style.left =
+        Math.random() * 100 + "%";
+
+    balloon.style.background =
+        balloonColors[
+            Math.floor(Math.random() *
+            balloonColors.length)
+        ];
+
+    balloon.style.color = balloon.style.background;
+
+    balloon.style.animationDuration =
+        (8 + Math.random() * 8) + "s";
+
+    balloon.style.animationDelay =
+        Math.random() * 8 + "s";
+
+    document.querySelector(".hero")
+        .appendChild(balloon);
+}
+
+
+/* =========================
+   HEARTS
+========================= */
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    const hearts = [
+        "💖",
+        "💕",
+        "💗",
+        "💓",
+        "💞",
+        "🌸"
+    ];
+
+    heart.textContent =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.left =
+        Math.random() * 100 + "%";
+
+    heart.style.animationDuration =
+        (4 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+
+setInterval(createHeart, 700);
+
+
+/* =========================
+   PETALS
+========================= */
+
+function createPetal() {
+
+    const petal = document.createElement("div");
+
+    petal.className = "petal";
+
+    const flowers = [
+        "🌸",
+        "🌷",
+        "🌺",
+        "💮"
+    ];
+
+    petal.textContent =
+        flowers[Math.floor(Math.random() * flowers.length)];
+
+    petal.style.left =
+        Math.random() * 100 + "%";
+
+    petal.style.animationDuration =
+        (5 + Math.random() * 6) + "s";
+
+    document.body.appendChild(petal);
+
+    setTimeout(() => {
+        petal.remove();
+    }, 12000);
+}
+
+setInterval(createPetal, 1000);
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+function createConfetti(amount = 100) {
+
+    for (let i = 0; i < amount; i++) {
+
+        const confetti =
+            document.createElement("div");
+
+        confetti.className = "confetti";
+
+        confetti.style.left =
+            Math.random() * 100 + "%";
+
+        confetti.style.background =
+            balloonColors[
+                Math.floor(Math.random() *
+                balloonColors.length)
+            ];
+
+        confetti.style.animationDuration =
+            (2 + Math.random() * 4) + "s";
+
+        confetti.style.animationDelay =
+            Math.random() * 2 + "s";
+
+        confetti.style.transform =
+            `rotate(${Math.random() * 360}deg)`;
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+            confetti.remove();
+        }, 7000);
+    }
+}
+
+
+/* Initial celebration */
+
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+        createConfetti(120);
+    }, 500);
+
+});
+
+
+/* =========================
+   GIFT INTERACTION
+========================= */
+
+const gift =
+    document.getElementById("gift");
+
+const giftMessage =
+    document.getElementById("giftMessage");
+
+const giftText =
+    document.getElementById("giftText");
+
+gift.addEventListener("click", () => {
+
+    gift.classList.toggle("open");
+
+    giftMessage.classList.toggle("show");
+
+    if (gift.classList.contains("open")) {
+
+        giftText.textContent =
+            "✨ Your surprise is open! 💖";
+
+        createConfetti(80);
+
+    } else {
+
+        giftText.textContent =
+            "🎁 Click me!";
+
+    }
+});
+
+
+/* =========================
+   SPECIAL MESSAGE
+========================= */
+
+const specialBtn =
+    document.getElementById("specialBtn");
+
+const specialMessage =
+    document.getElementById("specialMessage");
+
+specialBtn.addEventListener("click", () => {
+
+    specialMessage.classList.toggle("show");
+
+    if (specialMessage.classList.contains("show")) {
+
+        specialBtn.textContent =
+            "💖 Hide Message";
+
+        createConfetti(60);
+
+    } else {
+
+        specialBtn.textContent =
+            "A Special Message For You 💌";
+
+    }
+});
+
+
+/* =========================
+   MUSIC
+========================= */
+
+const music =
+    document.getElementById("birthdayMusic");
+
+const musicBtn =
+    document.getElementById("musicBtn");
+
+let playing = false;
+
+musicBtn.addEventListener("click", async () => {
+
+    if (!playing) {
+
+        try {
+
+            await music.play();
+
+            playing = true;
+
+            musicBtn.textContent =
+                "⏸ Pause Music";
+
+        } catch (error) {
+
+            alert(
+                "Please make sure 'birthday-music.mp3' is in the same folder as this HTML file."
+            );
+
+        }
+
+    } else {
+
+        music.pause();
+
+        playing = false;
+
+        musicBtn.textContent =
+            "🎵 Play Music";
+
+    }
+
+});
+
+
+/* =========================
+   CLICK CELEBRATION
+========================= */
+
+document.addEventListener("click", (event) => {
+
+    if (
+        event.target.tagName === "BUTTON" ||
+        event.target.classList.contains("start-btn")
+    ) {
+
+        createConfetti(25);
+
+    }
+
+});
+/* =========================
+   SPECIAL BUDDY LETTER
+========================= */
+
+const buddyBtn =
+    document.getElementById("buddyBtn");
+
+const buddyLetter =
+    document.getElementById("buddyLetter");
+
+buddyBtn.addEventListener("click", () => {
+
+    buddyLetter.classList.toggle("show");
+
+    if (buddyLetter.classList.contains("show")) {
+
+        buddyBtn.textContent =
+            "💖 Hide Your Special Message";
+
+        // Celebration when the letter opens
+        createConfetti(80);
+
+        // Extra hearts
+        for (let i = 0; i < 12; i++) {
+
+            setTimeout(() => {
+                createHeart();
+            }, i * 120);
+
+        }
+
+        // Scroll gently to the letter
+        setTimeout(() => {
+
+            buddyLetter.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        }, 200);
+
+    } else {
+
+        buddyBtn.textContent =
+            "💌 From Your Special Buddy 🫂❤️";
+
+    }
+
+});
+</script>
+
+</body>
+</html>
